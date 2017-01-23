@@ -19,8 +19,9 @@ function Form( element ) {
 
     this.init = function(){
 
-        var statusElement = document.querySelectorAll('.status-bar__list-item');
-        statusElement[5].classList.remove('-next');
+        var statusBar = document.querySelector('.m--status-bar');
+        statusBar.classList += ' -hide';
+
 
         for (var i = 0; i<images.length;i++){
 

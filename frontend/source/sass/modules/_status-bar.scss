@@ -13,6 +13,13 @@ $element-name: 'status-bar';
   align-items: center;
   justify-content: center;
 
+  &.-hide{
+
+    display: none;
+
+  }
+
+
 }
 
     .#{$element-name}__list{
