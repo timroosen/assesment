@@ -1,36 +1,11 @@
 {
-  "name": "frontend-setup",
-  "version": "1.0.2",
-  "license": "MIT",
-  "description": "A basic project setup for creating (static) html templates. Filled with automated tasks and configuration options.",
-  "author": "Tam Tam",
-  "contributors": [
-    {
-      "name": "Geert Fokke",
-      "email": "geert@tamtam.nl"
-    },
-    {
-      "name": "Adrian Klingen",
-      "email": "adrian@tamtam.nl"
-    },
-    {
-      "name": "Simon Colijn",
-      "email": "simon@tamtam.nl"
-    }
-  ],
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://bitbucket.org/tamtam-nl/tamtam-frontend-setup"
-  },
   "engines": {
     "node": "^0.12.2",
     "npm": "2.7.4"
   },
   "scripts": {
     "preinstall": "",
-    "postinstall": "bower install --config.interactive=false",
-    "bamboo": "gulp bamboo"
+    "postinstall": "bower install --config.interactive=false"
   },
   "devDependencies": {
     "bower": "^1.5.2",
