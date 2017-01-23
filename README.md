@@ -20,6 +20,7 @@ sudo cp {{location}}/Assesment/backend/provision/apache_config /etc/apache2/site
 
 
 3: $ sudo nano /etc/host
+
 toevoegen: 33.33.33.33 assesment.dev
 
 
@@ -40,3 +41,6 @@ $ mysql -uroot -proot
 $ use assement
 
 $ source assesment_2017-01-23.sql
+
+
+7: gaat naar: assesment.dev om de pagina te bekijken
