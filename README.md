@@ -23,10 +23,10 @@ sudo cp {{location}}/Assesment/backend/provision/apache_config /etc/apache2/site
 toevoegen: 33.33.33.33 assesment.dev
 
 
-4: $ vagrant up
+4: $ sudo composer install
 
 
-5: $ sudo composer install
+5: $ vagrant up
 
 
 6: update database:
