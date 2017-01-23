@@ -43,4 +43,4 @@ $ use assement
 $ source assesment_2017-01-23.sql
 
 
-7: gaat naar: assesment.dev om de pagina te bekijken
+7: ga naar: assesment.dev om de pagina te bekijken
