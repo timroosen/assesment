@@ -24,8 +24,13 @@ toevoegen: 33.33.33.33 assesment.dev
 5: $ sudo composer install
 
 6: update database:
+
 $ vagrant ssh
+
 $ cd /var/www
+
 $ mysql -uroot -proot
+
 $ use assement
+
 $ source assesment_2017-01-23.sql
