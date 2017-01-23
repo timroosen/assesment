@@ -1,0 +1,28 @@
+{%  macro label(data) %}
+
+    {%  if data.text %}
+        <label
+                for="{{ data.id }}"
+                class="input-label{%  if data.classes %} {{ data.classes }}{%  endif %}">
+            {{ data.text }}
+        </label>
+    {%  endif %}
+
+{%  endmacro %}
+
+{%  macro input(data) %}
+
+    {{ label({
+        text: data.label,
+        id: data.id
+    }) }}
+
+    <input
+            type="{{ data.type or 'text' }}"
+            name="{{ data.name }}"
+            id="{{ data.id }}"
+            class="input{%  if data.classes %} {{ data.classes }}{% endif %}"
+            {%  if data.placeholder %} placeholder="{{ data.placeholder }}"{%  endif %}
+            {% if data.required %} required {%  endif %}>
+
+{%  endmacro %}

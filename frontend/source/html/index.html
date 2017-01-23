@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+
+    <!-- You can use open graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+    <meta property="og:url"           content="{{ site.url }}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{ site.title }}" />
+    <meta property="og:description"   content="{{ site.description }}" />
+    <meta property="og:image"         content="{{ site.image }}" />
+
+    <title>Assesment</title>
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="css/main.css"/>
+
+</head>
+
+<body>
+
+<div class="main-wrapper">
+
+    {% include "modules/header.html" %}
+
+    <main role="main" class="main">
+
+        {% block content %}
+
+            <section class="m--app">
+
+                <div class="app__steps js--step-manager">
+
+                    {% include "modules/question5.html" %}
+
+                    {% include "modules/question6.html" %}
+
+                    {% include "modules/form.html" %}
+
+                </div>
+
+                {% include "modules/status-bar.html" %}
+
+            </section>
+
+        {% endblock %}
+
+    </main>
+
+</div>
+
+<script src="/js/main.js" type="text/javascript"></script>
+<script src="/js/libs.js" type="text/javascript"></script>
+
+</body>
+</html>

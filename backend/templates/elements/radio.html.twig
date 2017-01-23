@@ -1,0 +1,47 @@
+{%  macro label(data) %}
+
+    {%  if data.text %}
+        <label
+                for="{{ data.id }}"
+                class="input-label{%  if data.classes %} {{ data.classes }}{%  endif %}">
+            {{ data.text }}
+        </label>
+    {%  endif %}
+
+{%  endmacro %}
+
+{%  macro radios(data) %}
+
+    {{ label({
+        text: data.label,
+        id: data.id
+    }) }}
+
+    <div class="radio-wrapper">
+        {% for radio in data.options %}
+
+            <div class="radio">
+                <input
+                        type="radio"
+                        name="{{ data.name }}"
+                        id="{{ data.id }}__{{ loop.index }}"
+                        value="{{ radio.value }}"
+                        class="radio__input{%  if data.classes %} {{ data.classes }}{% endif %}"
+                        {%  if radio.selected %} checked="checked"{%  endif %}
+                        {% if radio.required %} required {%  endif %}>
+
+                {{ label({
+                    text: radio.label,
+                    id: data.id + '__' + loop.index,
+                    classes: 'radio__label'
+                }) }}
+
+                {% if radio.withInput == 'true' %}
+                    <input name="input-radio" class="radio__withinput input" type="text" />
+                    {% endif %}
+            </div>
+
+        {% endfor %}
+    </div>
+
+{%  endmacro %}

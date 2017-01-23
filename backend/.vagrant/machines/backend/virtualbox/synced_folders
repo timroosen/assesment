@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www":{"disabled":false,"guestpath":"/var/www","hostpath":"/Users/timr/Desktop/Assesment/backend","__vagrantfile":true},"/Users/timr/Desktop/Assesment/backend/provision":{"guestpath":"/Users/timr/Desktop/Assesment/backend/provision","hostpath":"/Users/timr/Desktop/Assesment/backend/provision","disabled":false,"__vagrantfile":true}}}

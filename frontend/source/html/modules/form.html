@@ -1,0 +1,70 @@
+<div class="m--step -form js--step js--step-form">
+
+    <div class="step__image-holder -hide-for-small">
+
+        <span class="step__image">
+            {%  svg 'image-docter.svg' %}
+        </span>
+
+        <span class="step__image -hart">
+            {%  svg 'image-hart.svg' %}
+        </span>
+
+    </div>
+
+
+    <div class="step__form">
+
+        <h3 class="h3 step__heading">Bedankt voor uw deelname!</h3>
+        <p  class="step__text -form">Wilt u graag met ons doorpraten over de vragen die u zojuist heeft beantwoord? Laat dan hier uw gegevens achter, dan nodigen we u uit voor een speciale bijeenkomst hierover.*</p>
+
+        <p class="data-saved">Je feedback is succesvol verzonden. Indien je wordt uitgenodigd voor een gesprek, zal dit gebeuren via het e-mailadres dat je in de voorgaande vraag hebt ingevuld.</p>
+
+        <fieldset>
+            <form type="post" id="user-details" name="user-details">
+
+                {% include 'elements/input.html' %}
+
+                {{ input({
+                    name: 'name',
+                    id: 'name',
+                    required: true,
+                    classes: '',
+                    placeholder: '',
+                    label: 'Voornaam + achternaam'
+                }) }}
+
+                {{ input({
+                    name: 'email',
+                    id: 'email',
+                    type: 'email',
+                    required: true,
+                    classes: '',
+                    placeholder: '',
+                    label: 'E-mailadres'
+                }) }}
+
+
+            </form>
+
+        </fieldset>
+
+
+        {% include 'elements/button.html' %}
+
+        {{ button({
+
+            classes: 'js--next-step',
+            label: 'Versturen ›'
+
+            })
+
+        }}
+
+        <p class="step__disclaimer -italic">*Let op: het deelnemersaantal hiervoor is beperkt.</p>
+
+
+
+    </div>
+
+</div>

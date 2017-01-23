@@ -1,0 +1,60 @@
+<div class="m--step -question5 js--step js--step-question5">
+
+    <div class="step__image-holder -hide-for-small">
+
+        <span class="step__image">
+            {%  svg 'image-phone1.svg' %}
+        </span>
+
+        <span class="step__image">
+            {%  svg 'image-phone2.svg' %}
+        </span>
+
+        <span class="step__image">
+            {%  svg 'image-phone3.svg' %}
+        </span>
+    </div>
+
+
+    <div class="step__form">
+
+        <h3 class="h3 step__heading">Wie vind je een betrouwbare afzender van de informatie?</h3>
+
+        <fieldset>
+            <form>
+
+                {% include 'elements/radio.html' %}
+
+                {{ radios({
+                    name: 'question5',
+                    id: 'question5',
+                    required: true,
+                    options: [
+                    {'value': 'Maakt mij niet uit, wat ik op Google vind', 'label': 'Maakt mij niet uit, wat ik op Google vind', 'selected': true},
+                    {'value': 'Mijn dokter of medische experts', 'label': 'Mijn dokter of medische experts'},
+                    {'value': 'Lotgenoten', 'label': 'Lotgenoten'},
+                    {'value': 'Anders, namelijk…', 'label': 'Anders, namelijk…', 'withInput': 'true'}
+                    ]
+                }) }}
+
+            </form>
+
+        </fieldset>
+
+
+        {% include 'elements/button.html' %}
+
+        {{ button({
+
+            classes: 'js--next-step',
+            label: 'Ga naar vraag 6 ›'
+
+            })
+
+        }}
+
+
+
+    </div>
+
+</div>

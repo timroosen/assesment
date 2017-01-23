@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/public_html
+    ServerName assesment.dev
+        <Directory /var/www/public_html>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                Allow from all
+        </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+        <IfModule mod_php5.c>
+            php_admin_flag display_errors on
+            php_admin_flag display_startup_errors on
+        </IfModule>
+</VirtualHost>

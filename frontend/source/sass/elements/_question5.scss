@@ -1,0 +1,75 @@
+$element-name: '-question5';
+
+
+.#{$element-name}{
+
+  .step__image{
+
+    margin: 0 10px;
+
+    transform: translateY(200%);
+
+    svg{
+
+      $width: 117px;
+      $height: 213px;
+
+      width: $width;
+      height: $height;
+
+      @media #{$screen-medium-and-down} {
+
+        width: #{$width /1.5};
+        height: #{$height /1.5};
+
+      }
+
+    }
+
+    &.-animation{
+
+      transition: transform 450ms $ease-out-cubic;
+
+      transform: translateY(35%);
+
+    }
+
+    &:first-of-type {
+
+      margin-left: 0;
+      margin-right: 10px;
+
+      &.-animation {
+
+        transition-delay: 0ms;
+
+      }
+
+    }
+
+    &:nth-of-type(2) {
+
+      &.-animation {
+
+        transition-delay: 250ms;
+
+      }
+
+    }
+
+    &:last-of-type {
+
+      margin-left: 10px;
+      margin-right: 0;
+
+      &.-animation {
+
+        transition-delay: 500ms;
+
+      }
+
+    }
+
+  }
+
+}

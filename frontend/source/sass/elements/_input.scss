@@ -1,0 +1,35 @@
+$element-name: 'input';
+
+.#{$element-name} {
+
+  box-shadow: inset 3px 3px 3px 0px rgba(0,0,0,0.15);
+
+  background-color: $color-white;
+
+  border: 1px solid $color-dark-green;
+  border-radius: 3px;
+
+  width: 60%;
+  max-width: 280px;
+
+  height: 40px;
+
+  padding: 12px;
+
+  &:focus {
+
+    border-color: darken($color-dark-green, 10%);
+
+  }
+
+  &.-error {
+    border: 1px solid red;
+  }
+
+  @media #{$screen-medium-and-down} {
+
+    width: 50%;
+
+  }
+
+}

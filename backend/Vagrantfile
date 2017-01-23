@@ -1,0 +1,19 @@
+Vagrant.configure(2) do |config|
+config.vm.box = "ubuntu/trusty64"
+# Mentioning the SSH Username/Password:
+config.ssh.username = "vagrant"
+config.ssh.password = "vagrant"
+# Begin Configuring
+config.vm.define "backend" do|lamp|
+config.vm.hostname = "backend" # Setting up hostname
+config.vm.network "private_network", ip: "33.33.33.33" # Setting up machine's IP Address
+config.vm.provision :shell, path: "./provision/bootstrap.sh"
+
+config.vm.synced_folder "/Users/timr/Desktop/Assesment/backend", "/var/www", disabled: false
+config.vm.synced_folder ".", "/vagrant", disabled: true
+config.vm.synced_folder "./provision", "/Users/timr/Desktop/Assesment/backend/provision"
+
+
+end
+# End Configuring
+end

@@ -1,0 +1,35 @@
+$module-name: 'header';
+$element-name: 'header';
+
+$header-height: 87px;
+
+
+.m--#{$module-name}{
+
+  background-color: $color-white;
+
+  width: 100%;
+  height: $header-height;
+
+  text-align: center;
+
+  @media #{$screen-small-and-down} {
+
+    height: calc(#{$header-height} - 30px);
+
+  }
+
+}
+
+
+  .#{$element-name}__image{
+
+    width: 500px;
+
+    @media #{$screen-small-and-down} {
+
+      width: 340px;
+
+    }
+
+  }

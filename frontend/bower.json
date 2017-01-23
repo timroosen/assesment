@@ -1,0 +1,15 @@
+{
+  "name": "frontend-setup",
+  "description": "This bower.json is only here for bower dependencies, for actual information on this project see the package.json.",
+  "private": true,
+  "ignore": [
+    "*.log",
+    "node_modules"
+  ],
+  "dependencies": {
+    "susy": "^2.2.12"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.0"
+  }
+}

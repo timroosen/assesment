@@ -1,0 +1,50 @@
+$button-transition-time		: 450ms;
+$button-transition-ease		: $ease-in-out-cubic;
+
+%button-base {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+.button {
+
+  @extend %button-base;
+
+  background-color: $color-button;
+  color: $color-white;
+
+  font-family: $font-stack-buttons;;
+  text-align: center;
+
+  padding: 8px 67px;
+  font-size: 21px;
+
+  margin-top: 75px;
+  margin-bottom: 10px;
+
+  border-radius: 3px;
+
+  transition: $button-transition-time $button-transition-ease;
+  transition-property: background-color;
+
+  &:focus,
+  &:hover {
+
+    background-color: darken($color-button, 7%);
+
+  }
+
+  @media #{$screen-medium-and-down} {
+
+    width: 100%;
+
+    padding: 8px 0;
+
+  }
+
+}
+

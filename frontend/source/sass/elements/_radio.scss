@@ -1,0 +1,157 @@
+$element-name: 'radio';
+
+$input-spacing: 40px;
+$input-spacing-mobile: $input-spacing / 2;
+
+.#{$element-name}{
+
+  width: 100%;
+  position: relative;
+  margin-bottom: $input-spacing / 4;
+
+  font-family: $font-stack-secondary;
+
+  &:last-child {
+    margin-bottom: $input-spacing / 2;
+  }
+
+  &.-inline {
+    display: inline-block;
+    width: auto;
+    padding-right: $input-spacing / 2;
+  }
+
+  @media #{$screen-small-and-down} {
+
+    &:last-child {
+      margin-bottom: $input-spacing-mobile;
+    }
+
+  }
+
+}
+
+  .#{$element-name}__label{
+
+
+    display: inline-block;
+    position: relative;
+
+    font-weight: $font-weight-medium;
+    font-size: 16px;
+
+    color: $color-text;
+
+    margin-left: 30px;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+
+      &:after {
+
+        border: 1px solid rgba($color-dark-green, 1);
+        background: rgba($color-white, 1);
+        transform: scale(1.1);
+
+      }
+
+      &:before{
+
+        background: rgba($color-dark-blue, 1);
+
+      }
+    }
+
+
+    &:after {
+
+      content: '';
+
+      position: absolute;
+      z-index: 0;
+
+      width: 20px;
+      height: 20px;
+
+      top: 2px;
+      left: -30px;
+
+      box-shadow: inset 3px 3px 3px 0 rgba(0,0,0,0.15);
+
+      border-radius: 20px;
+      border: 1px solid rgba($color-dark-green, 1);
+
+      transition: all 450ms $ease-out-back;
+      transform: scale(1);
+
+      background: rgba($color-white, 1);
+
+    }
+
+    &:before {
+
+      content: '';
+
+      position: absolute;
+      z-index: 2;
+
+      width: 10px;
+      height: 10px;
+
+      top: 7px;
+      left: -25px;
+
+      border-radius: 20px;
+
+      transition: all 450ms $ease-out-back;
+      transform: scale(1);
+
+      background: rgba($color-dark-blue, 0);
+
+    }
+
+
+  }
+
+  .#{$element-name}__input {
+
+    position: absolute;
+    left: -999em;
+
+    &:checked + .#{$element-name}__label {
+
+      &:before {
+
+        background: rgba($color-dark-blue, 1);
+
+      }
+
+      &:hover,
+      &:focus{
+
+        &:before {
+
+          transition: all 450ms $ease-out-cubic;
+          transform: scale(1.1);
+
+        }
+
+      }
+
+    }
+
+    &:focus + .#{$element-name}__label {
+
+      color: $color-dark-blue;
+
+    }
+
+  }
+
+  .#{$element-name}__withinput{
+
+    display: inline-block;
+
+  }

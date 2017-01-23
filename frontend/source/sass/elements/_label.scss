@@ -1,0 +1,15 @@
+$element-name: 'input-label';
+
+.#{$element-name}{
+
+  display: inline-block;
+
+  color: $color-text;
+
+  font-family: $font-stack-secondary;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+
+  padding-bottom: 5px;
+
+}

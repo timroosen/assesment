@@ -1,0 +1,85 @@
+$module-name: 'step';
+$element-name: 'step';
+
+
+.m--#{$module-name}{
+
+  display: flex;
+  position: relative;
+
+  width: 100vw;
+
+  padding: 0 100px;
+
+  text-align: right;
+
+  @media #{$screen-medium-and-down} {
+
+    padding: 0 20px;
+
+  }
+
+}
+
+
+  .#{$element-name}__image-holder{
+
+    @extend %spaceless;
+
+    display: block;
+
+    position: relative;
+
+    width: 50%;
+
+    padding-right: 20px;
+
+    text-align: right;
+
+    overflow: hidden;
+
+    @media #{$screen-small-and-down} {
+
+      &.-hide-for-small {
+
+        display: none;
+
+      }
+
+    }
+
+
+  }
+
+
+  .#{$element-name}__image{
+
+    display: inline-block;
+
+  }
+
+
+  .#{$element-name}__form {
+
+    width: 50%;
+
+    padding-left: 20px;
+
+    text-align: left;
+
+    @media #{$screen-small-and-down} {
+
+      width: 100%;
+
+      padding: 0;
+
+    }
+
+  }
+
+  .#{$element-name}__heading{
+
+    color: $color-primary;
+
+  }
+

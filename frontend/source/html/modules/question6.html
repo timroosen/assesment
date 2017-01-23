@@ -1,0 +1,57 @@
+<div class="m--step -question6 js--step js--step-question6">
+
+    <div class="step__image-holder -hide-for-small">
+
+        <span class="step__image">
+            {%  svg 'image-computer.svg' %}
+        </span>
+
+        <span class="step__image -vergroot">
+            {%  svg 'image-vergroot.svg' %}
+        </span>
+
+    </div>
+
+
+    <div class="step__form">
+
+        <h3 class="h3 step__heading">Wat voor soort informatie zou u zoeken?</h3>
+
+        <fieldset>
+            <form>
+
+                {% include 'elements/radio.html' %}
+
+                {{ radios({
+                    name: 'question6',
+                    id: 'question6',
+                    required: true,
+                    options: [
+                    {'value': 'Hoe om te gaan met mijn ziekte/beperking in het dagelijks leven.', 'label': 'Hoe om te gaan met mijn ziekte/beperking in het dagelijks leven.', 'selected': true},
+                    {'value': 'Waar ik het beste behandeld kan worden of welke dokter of medisch specialist het beste bekend staat.', 'label': 'Waar ik het beste behandeld kan worden of welke dokter of medisch specialist het beste bekend staat.'},
+                    {'value': 'De ervaringen van andere patiënten over hun behandeling.', 'label': 'De ervaringen van andere patiënten over hun behandeling.'},
+                    {'value': 'Anders, namelijk…', 'label': 'Anders, namelijk…', 'withInput': 'true'}
+                    ]
+                }) }}
+
+            </form>
+
+        </fieldset>
+
+
+        {% include 'elements/button.html' %}
+
+        {{ button({
+
+            classes: 'js--next-step',
+            label: 'Ga naar eindscherm'
+
+        })
+
+        }}
+
+
+
+    </div>
+
+</div>

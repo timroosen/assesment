@@ -1,0 +1,36 @@
+$module-name: 'app';
+$element-name: 'app';
+
+$number-of-steps: 4;
+
+
+.m--#{$module-name}{
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  @media #{$screen-medium-and-down} {
+
+    min-height: 520px;
+
+  }
+
+}
+
+  .#{$element-name}__steps{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+
+    width: calc(100vw * #{$number-of-steps});
+
+    height: calc(100vh - #{$header-height} - 100px);
+    min-height: 490px;
+
+    overflow: hidden;
+
+  }
