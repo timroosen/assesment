@@ -15,7 +15,7 @@ config.vm.synced_folder "{{location}}/Assesment/backend", "/var/www", disabled: 
 config.vm.synced_folder "./provision", "{{location}}/Assesment/backend/provision"
 
 
-2: In de map backend/provision de file bootstrap.sh pas aanpassen:
+2: In de map backend/provision de file bootstrap.sh pad aanpassen:
 sudo cp {{location}}/Assesment/backend/provision/apache_config /etc/apache2/sites-available/site.conf
 
 
