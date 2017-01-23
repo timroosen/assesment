@@ -12,11 +12,12 @@
 @import "layout/html";
 
 //	Elements
-@import "elements/fieldset";
+@import "elements/form/fieldset";
+@import "elements/form/input";
+@import "elements/form/radio";
+@import "elements/form/label";
+
 @import "elements/button";
-@import "elements/input";
-@import "elements/radio";
-@import "elements/label";
 @import "elements/heading";
 @import "elements/question5";
 @import "elements/question6";

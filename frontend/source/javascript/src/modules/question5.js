@@ -2,7 +2,6 @@
 
 
 var steppositionmanger 	= require('../modules/Steppositionmanger.js');
-var TweenMax			= require('gsap/src/minified/TweenMax.min.js');
 
 
 function Question5( element ) {

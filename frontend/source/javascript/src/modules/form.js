@@ -74,8 +74,8 @@ function Form( element ) {
             data.question6 = document.querySelector('input[name=question6]:checked').value+' '+question6.getElementsByTagName('input')[4].value;
 
         var params = {};
-            params.type ='post',
-            params.url = '/saveuser',
+            params.type ='post';
+            params.url = '/saveuser';
 
             params.data = JSON.stringify(data);
             params.dataType = 'json';
