@@ -3,11 +3,11 @@
     <div class="step__image-holder -hide-for-small">
 
         <span class="step__image">
-            {%  svg 'image-computer.svg' %}
+            {{ asset("/public_html/assets/svg/image-computer.svg") |raw }}
         </span>
 
         <span class="step__image -vergroot">
-            {%  svg 'image-vergroot.svg' %}
+            {{ asset("/public_html/assets/svg/image-vergroot.svg") |raw }}
         </span>
 
     </div>
@@ -20,17 +20,19 @@
         <fieldset>
             <form>
 
-                {% include 'elements/radio.html' %}
+                {% import 'elements/radio.html.twig' as radio %}
 
-                {{ radios({
+                {{ radio.radios({
+                    label: '',
                     name: 'question6',
                     id: 'question6',
+                    classes: '',
                     required: true,
                     options: [
-                    {'value': 'Hoe om te gaan met mijn ziekte/beperking in het dagelijks leven.', 'label': 'Hoe om te gaan met mijn ziekte/beperking in het dagelijks leven.', 'selected': true},
-                    {'value': 'Waar ik het beste behandeld kan worden of welke dokter of medisch specialist het beste bekend staat.', 'label': 'Waar ik het beste behandeld kan worden of welke dokter of medisch specialist het beste bekend staat.'},
-                    {'value': 'De ervaringen van andere patiënten over hun behandeling.', 'label': 'De ervaringen van andere patiënten over hun behandeling.'},
-                    {'value': 'Anders, namelijk…', 'label': 'Anders, namelijk…', 'withInput': 'true'}
+                    {'value': 'Hoe om te gaan met mijn ziekte/beperking in het dagelijks leven.', 'label': 'Hoe om te gaan met mijn ziekte/beperking in het dagelijks leven.', 'selected': true, 'withInput': 'false'},
+                    {'value': 'Waar ik het beste behandeld kan worden of welke dokter of medisch specialist het beste bekend staat.', 'label': 'Waar ik het beste behandeld kan worden of welke dokter of medisch specialist het beste bekend staat.', 'selected': false, 'withInput': 'false'},
+                    {'value': 'De ervaringen van andere patiënten over hun behandeling.', 'label': 'De ervaringen van andere patiënten over hun behandeling.', 'selected': false, 'withInput': 'false'},
+                    {'value': 'Anders, namelijk…', 'label': 'Anders, namelijk…', 'withInput': 'true', 'selected': false, 'withInput': 'true'}
                     ]
                 }) }}
 
@@ -39,9 +41,9 @@
         </fieldset>
 
 
-        {% include 'elements/button.html' %}
+        {% import 'elements/button.html.twig' as button %}
 
-        {{ button({
+        {{ button.button({
 
             classes: 'js--next-step',
             label: 'Ga naar eindscherm'

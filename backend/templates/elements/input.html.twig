@@ -12,9 +12,12 @@
 
 {%  macro input(data) %}
 
-    {{ label({
+    {% import _self as label %}
+
+    {{ label.label({
         text: data.label,
-        id: data.id
+        id: data.id,
+        classes: ''
     }) }}
 
     <input

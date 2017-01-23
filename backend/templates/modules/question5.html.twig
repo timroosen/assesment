@@ -3,15 +3,15 @@
     <div class="step__image-holder -hide-for-small">
 
         <span class="step__image">
-            {#{%  svg 'image-phone1.svg' %}#}
+            {{ asset("/public_html/assets/svg/image-phone1.svg") |raw }}
         </span>
 
         <span class="step__image">
-            {#{%  svg 'image-phone2.svg' %}#}
+            {{ asset("/public_html/assets/svg/image-phone2.svg") |raw }}
         </span>
 
         <span class="step__image">
-            {#{%  svg 'image-phone3.svg' %}#}
+            {{ asset("/public_html/assets/svg/image-phone3.svg") |raw }}
         </span>
     </div>
 
@@ -26,14 +26,16 @@
                 {% import 'elements/radio.html.twig' as radio %}
 
                 {{ radio.radios({
+                    label: '',
                     name: 'question5',
                     id: 'question5',
+                    classes: '',
                     required: true,
                     options: [
-                    {'value': 'Maakt mij niet uit, wat ik op Google vind', 'label': 'Maakt mij niet uit, wat ik op Google vind', 'selected': true},
-                    {'value': 'Mijn dokter of medische experts', 'label': 'Mijn dokter of medische experts'},
-                    {'value': 'Lotgenoten', 'label': 'Lotgenoten'},
-                    {'value': 'Anders, namelijk…', 'label': 'Anders, namelijk…', 'withInput': 'true'}
+                    {'value': 'Maakt mij niet uit, wat ik op Google vind', 'label': 'Maakt mij niet uit, wat ik op Google vind', 'selected': true, 'withInput': 'false'},
+                    {'value': 'Mijn dokter of medische experts', 'label': 'Mijn dokter of medische experts', 'selected': false, 'withInput': 'false'},
+                    {'value': 'Lotgenoten', 'label': 'Lotgenoten', 'selected': false, 'withInput': 'false'},
+                    {'value': 'Anders, namelijk…', 'label': 'Anders, namelijk…', 'selected': false, 'withInput': 'true'}
                     ]
                 }) }}
 

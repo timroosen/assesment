@@ -12,33 +12,35 @@
 
 {%  macro radios(data) %}
 
-    {{ label({
+    {% import _self as label %}
+
+    {{ label.label({
         text: data.label,
         id: data.id
     }) }}
 
     <div class="radio-wrapper">
-        {% for radio in data.options %}
+        {% for option in data.options %}
 
             <div class="radio">
                 <input
                         type="radio"
                         name="{{ data.name }}"
                         id="{{ data.id }}__{{ loop.index }}"
-                        value="{{ radio.value }}"
+                        value="{{ option.value }}"
                         class="radio__input{%  if data.classes %} {{ data.classes }}{% endif %}"
-                        {%  if radio.selected %} checked="checked"{%  endif %}
-                        {% if radio.required %} required {%  endif %}>
+                        {%  if option.selected %} checked="checked"{%  endif %}
+                        >
 
-                {{ label({
-                    text: radio.label,
-                    id: data.id + '__' + loop.index,
+                {{ label.label({
+                    text: option.label,
+                    id: data.id ~ '__' ~ loop.index,
                     classes: 'radio__label'
                 }) }}
 
-                {% if radio.withInput == 'true' %}
+                {% if option.withInput == 'true' %}
                     <input name="input-radio" class="radio__withinput input" type="text" />
-                    {% endif %}
+                {% endif %}
             </div>
 
         {% endfor %}

@@ -1,9 +1,12 @@
 <?php
 
+$app['debug'] = true;
+
 $app->register(new Silex\Provider\TwigServiceProvider(), [
   'twig.options' => [
     'cache'            => FALSE,
     'strict_variables' => TRUE,
+      'debug'=> TRUE
   ],
   'twig.path'    => [dirname(__DIR__) . '/templates']
 ]);

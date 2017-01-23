@@ -3,11 +3,11 @@
     <div class="step__image-holder -hide-for-small">
 
         <span class="step__image">
-            {%  svg 'image-docter.svg' %}
+            {{ asset("/public_html/assets/svg/image-docter.svg") |raw }}
         </span>
 
         <span class="step__image -hart">
-            {%  svg 'image-hart.svg' %}
+            {{ asset("/public_html/assets/svg/image-hart.svg") |raw }}
         </span>
 
     </div>
@@ -23,18 +23,19 @@
         <fieldset>
             <form type="post" id="user-details" name="user-details">
 
-                {% include 'elements/input.html' %}
+                {% import 'elements/input.html.twig' as input %}
 
-                {{ input({
+                {{ input.input({
                     name: 'name',
                     id: 'name',
+                    type: 'text',
                     required: true,
                     classes: '',
                     placeholder: '',
                     label: 'Voornaam + achternaam'
                 }) }}
 
-                {{ input({
+                {{ input.input({
                     name: 'email',
                     id: 'email',
                     type: 'email',
@@ -50,9 +51,9 @@
         </fieldset>
 
 
-        {% include 'elements/button.html' %}
+        {% import 'elements/button.html.twig' as button %}
 
-        {{ button({
+        {{ button.button({
 
             classes: 'js--next-step',
             label: 'Versturen ›'

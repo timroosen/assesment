@@ -16,9 +16,6 @@ class Savedata extends Response {
 
   public function saveUser($post){
 
-      $http_code = 400;
-
-
       if(empty($post['name']) || !is_string($post['name'])) {
           return $this->app->json('Could not validate: name', Response::HTTP_BAD_REQUEST);
       }

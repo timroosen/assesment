@@ -33,7 +33,6 @@ $app->post('/api/v1/saveuser', function (Request $request) use ($app) {
 
 $app->error(function (\Exception $e, $code) use ($app) {
 
-//    var_dump($e);exit;
   if ($app['debug']) {
     return;
   }
