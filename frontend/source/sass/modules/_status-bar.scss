@@ -33,6 +33,7 @@ $element-name: 'status-bar';
       margin: 0 0 0 2px;
       line-height: 48px;
 
+
       &:first-child{
         margin: 0;
 
@@ -80,6 +81,8 @@ $element-name: 'status-bar';
 
       position: relative;
 
+      transition: background-color 450ms $ease-in-out-cubic;
+
       text-align: center;
       line-height: 24px;
 
@@ -94,6 +97,8 @@ $element-name: 'status-bar';
       &:after{
 
         content: '';
+
+        transition: background-color 450ms $ease-in-out-cubic;
 
         position: absolute;
 
