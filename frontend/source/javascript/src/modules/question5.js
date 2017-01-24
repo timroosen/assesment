@@ -17,7 +17,6 @@ function Question5( element ) {
 
         if(element.querySelector('input[name=question5]:checked').id == 'question5__4' && element.getElementsByTagName('input')[4].value.length < 4){
 
-            // element.getElementsByTagName('input')[4].classList += ' -error';
             element.getElementsByTagName('input')[4].classList.add('-error');
             return false;
 
@@ -29,7 +28,6 @@ function Question5( element ) {
 
         var statusElement = document.querySelectorAll('.status-bar__list-item');
         statusElement[4].querySelector('.status-bar__count').innerHTML = ' ';
-        // statusElement[4].classList += ' -done';
         statusElement[4].classList.add('-done');
 
         steppositionmanger.nextStep();

@@ -16,7 +16,6 @@ function Question6( element ) {
 
         if(element.querySelector('input[name=question6]:checked').id == 'question6__4' && element.getElementsByTagName('input')[4].value.length < 4){
 
-            // element.getElementsByTagName('input')[4].classList += ' -error';
             element.getElementsByTagName('input')[4].classList.add('-error');
             return false;
 
@@ -40,7 +39,6 @@ function Question6( element ) {
 
         for (var i = 0; i<images.length;i++){
 
-            // images[i].classList += ' -animation';
             images[i].classList.add('-animation');
 
         }
