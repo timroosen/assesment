@@ -20,12 +20,14 @@ function Form( element ) {
     this.init = function(){
 
         var statusBar = document.querySelector('.m--status-bar');
-        statusBar.classList += ' -hide';
+        // statusBar.classList += ' -hide';
+        statusBar.classList.add('-hide');
 
 
         for (var i = 0; i<images.length;i++){
 
-            images[i].classList += ' -animation';
+            // images[i].classList += ' -animation';
+            images[i].classList.add('-animation');
 
         }
 
@@ -37,7 +39,8 @@ function Form( element ) {
 
         if(element.querySelector('input[name=name]').value.length < 2){
 
-            element.querySelector('input[name=name]').classList += ' -error';
+            // element.querySelector('input[name=name]').classList += ' -error';
+            element.querySelector('input[name=name]').classList.add('-error');
             validated = false;
         }else{
 
@@ -47,7 +50,8 @@ function Form( element ) {
 
         if(!validateEmail(element.querySelector('input[name=email]').value)){
 
-            element.querySelector('input[name=email]').classList += ' -error';
+            // element.querySelector('input[name=email]').classList += ' -error';
+            element.querySelector('input[name=email]').classList.add('-error');
             validated =  false;
 
         }else{

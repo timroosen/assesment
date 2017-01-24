@@ -16,7 +16,8 @@ function Question6( element ) {
 
         if(element.querySelector('input[name=question6]:checked').id == 'question6__4' && element.getElementsByTagName('input')[4].value.length < 4){
 
-            element.getElementsByTagName('input')[4].classList += ' -error';
+            // element.getElementsByTagName('input')[4].classList += ' -error';
+            element.getElementsByTagName('input')[4].classList.add('-error');
             return false;
 
         }else{
@@ -26,7 +27,7 @@ function Question6( element ) {
         }
 
         statusElement[5].querySelector('.status-bar__count').innerHTML = ' ';
-        statusElement[5].classList += ' -done';
+        statusElement[5].classList.add('-done');
 
         steppositionmanger.nextStep();
 
@@ -39,7 +40,8 @@ function Question6( element ) {
 
         for (var i = 0; i<images.length;i++){
 
-            images[i].classList += ' -animation';
+            // images[i].classList += ' -animation';
+            images[i].classList.add('-animation');
 
         }
 
